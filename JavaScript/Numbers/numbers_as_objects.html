@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>y</title>
+</head>
+<body>
+<h2>JavaScript Numbers</h2>
+
+<p id="demo"></p>
+
+<script>
+    // x is a number
+    let x = 123;
+
+    // y is a Number object
+    let y = new Number(123);
+
+    document.getElementById("demo").innerHTML = typeof x + "<br>" + typeof y;
+</script>
+<p>
+
+    Do not create Number objects.<br>
+
+    The new keyword complicates the code and slows down execution speed.<br>
+
+    Number Objects can produce unexpected results:<br>
+</p>
+<hr>
+<p>Numbers and Number objects cannot be safely compared:</p>
+
+<p id="demo2"></p>
+
+<script>
+    // x is a number
+    let a = 500;
+
+    // y is an object
+    let b = new Number(50);
+    document.getElementById("demo2").innerHTML = (a==b);
+</script>
+<hr>
+<p>JavaScript objects cannot be compared.  Comparing two JavaScript objects always returns false.</p>
+<p id="demo3"></p>
+
+<script>
+    // x is an object
+    let c = new Number(500);
+
+    // y is an object
+    let d = new Number(500);
+
+    document.getElementById("demo3").innerHTML = (c==d);
+</script>
+<p id="demo4"></p>
+
+<script>
+    // x is an object
+    let e = new Number(500);
+
+    // y is an object
+    let f = new Number(500);
+
+    document.getElementById("demo4").innerHTML = (e===f);
+</script>
+
+</body>
+</html>

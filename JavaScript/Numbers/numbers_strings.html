@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript Numbers</h2>
+
+<p>If you add two numbers, the result will be a number:</p>
+
+<p id="demo"></p>
+
+<script>
+  let x = 10;
+  let y = 20;
+  let z = x + y;
+  document.getElementById("demo").innerHTML = z;
+</script>
+<p>If you add two numeric strings, the result will be a concatenated string:</p>
+
+<p id="demo2"></p>
+
+<script>
+  let a = "10";
+  let b = " 20";
+  let c = a + b;
+  document.getElementById("demo2").innerHTML = c;
+</script>
+<hr>
+<p>If you add a number and a numeric string, the result will be a concatenated string:</p>
+
+<p id="demo3"></p>
+
+<script>
+  let d = 10;
+  let e = "20";
+  let f = d + e;
+  document.getElementById("demo3").innerHTML = f;//flipping the types in 'd' & 'e' will result in the same concatenated string
+</script>
+<hr>
+<p>A common mistake is to expect this result to be 30:</p>
+
+<p id="demo4"></p>
+
+<script>
+  var g = 10;
+  var h = 20;
+  document.getElementById("demo4").innerHTML =
+          "The result is: " + g + h;
+</script>
+<hr>
+<p>JavaScript will try to convert strings to numbers when dividing:</p>
+
+<p id="demo5"></p>
+
+<script>
+  let i = "100";
+  let j = "10";
+  let k = i / j;//or '*'(multiply) or'-'(subtract) or '+'(add)
+  document.getElementById("demo5").innerHTML = k;
+</script>
+
+</body>
+</html>

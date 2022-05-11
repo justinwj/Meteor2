@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>My First JavaScript</h1>
+
+<button type="button"
+        onclick="document.getElementById('time').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+
+<p id="time"></p>
+<hr>
+<h2>Use JavaScript to Change Text</h2>
+<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+
+<p id="demo"></p><!--this is the HTML Element-->
+
+<script>
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Getting server updates</h1>
+<div id="result"></div>
+<!--the server is not set up correctly to work.
+PHPStorm has a built in server if set up correctly-->
+<script>
+  if(typeof(EventSource) !== "undefined") {
+    var source = new EventSource("D:\\Users\\justinwj\\PHPProjects\\W3schoolSSE\\demo_sse.php");
+    source.onmessage = function(event) {
+      document.getElementById("result").innerHTML += event.data + "<br>";
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+  }
+</script>
+</body>
+</html>

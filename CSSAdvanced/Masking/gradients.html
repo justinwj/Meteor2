@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .mask1 {
+      -webkit-mask-image: linear-gradient(black, transparent);
+      mask-image: linear-gradient(black, transparent);
+    }
+
+    .mask2 {
+      max-width: 600px;
+      height: 350px;
+      overflow-y: scroll;
+      background: url(img_5terre.jpg) no-repeat;
+      -webkit-mask-image: linear-gradient(black, transparent);
+      mask-image: linear-gradient (black, transparent);
+    }
+    .mask3 {
+      -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+      mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+    }
+    p {
+      font-size: 20px;
+      padding: 20px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h1>The mask-image Property</h1>
+
+<h3>A linear gradient as a mask layer:</h3>
+<div class="mask1">
+  <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>Original image:</h3>
+<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+
+<h1>The mask-image Property</h1>
+
+<h3>A linear gradient as a mask layer:</h3>
+
+<div class="mask2">
+  <p>The Cinque Terre is a coastal area within Liguria, in the northwest of Italy. It lies in the west of La Spezia Province, and comprises five villages: Monterosso al Mare, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
+
+  <p>The Cinque Terre is a coastal area within Liguria, in the northwest of Italy. It lies in the west of La Spezia Province, and comprises five villages: Monterosso al Mare, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
+
+  <p>The Cinque Terre is a coastal area within Liguria, in the northwest of Italy. It lies in the west of La Spezia Province, and comprises five villages: Monterosso al Mare, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
+</div>
+
+<h1>The mask-image Property</h1>
+
+<h3>A radial gradient as a mask layer (a circle):</h3>
+<div class="mask3">
+  <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>Original image:</h3>
+<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</body>
+</html>

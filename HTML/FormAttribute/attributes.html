@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The form target attribute</h2>
+
+<p>When submitting this form, the result will be opened in a new browser tab:</p>
+
+<form action="/action_page.php" target="_blank">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<h2>The method Attribute</h2>
+<p>This form will be submitted using the GET method:</p>
+<h2>The Target Attribute</h2>
+<p>The <code class="w3-codespan">target</code> attribute specifies where to
+  display the response that is received after submitting the form.</p>
+<p>The <code class="w3-codespan">target</code> attribute can have one of the
+  following values:</p>
+<table class="ws-table-all notranslate">
+  <tbody><tr>
+    <th style="width:20%">Value</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>_blank</td>
+    <td>The response is displayed in a new window or tab</td>
+  </tr>
+  <tr>
+    <td>_self</td>
+    <td>The response is displayed in the current window</td>
+  </tr>
+  <tr>
+    <td>_parent</td>
+    <td>The response is displayed in the parent frame</td>
+  </tr>
+  <tr>
+    <td>_top</td>
+    <td>The response is displayed in the full body of the window</td>
+  </tr>
+  <tr>
+    <td><i>framename</i></td>
+    <td>The response is displayed in a named iframe</td>
+  </tr>
+  </tbody></table>
+<p>The default value is <code class="w3-codespan">_self</code> which means that
+  the response will open in the current window.</p>
+
+<form action="/action_page.php" target="_blank" method="get">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>After you submit, notice that the form values is visible in the address bar of the new browser tab.</p>
+<h2>The method Attribute</h2>
+
+<p>This form will be submitted using the POST method:</p>
+
+<form action="/action_page.php" target="_blank" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<p>After you submit, notice that, unlike the GET method, the form values is NOT visible in the address bar of the new browser tab.</p>
+<p><b>Notes on GET:</b> </p>
+<ul>
+  <li>Appends the form data to the URL, in name/value pairs</li>
+  <li>NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)</li>
+  <li>The length of a URL is limited (2048 characters)</li>
+  <li>Useful for form submissions where a user wants to bookmark the result</li>
+  <li>GET is good for non-secure data, like query strings in Google</li>
+</ul>
+<p><b>Notes on POST:</b> </p>
+<ul>
+  <li>Appends the form data inside the body of the HTTP request (the submitted
+    form data is not shown in the URL)</li>
+  <li>POST has no size limitations, and can be used to send large amounts of data.</li>
+  <li>Form submissions with POST cannot be bookmarked</li>
+</ul>
+List of All <form> Attributes
+  <div class="w3-responsive">
+    <table class="ws-table-all">
+      <tbody><tr>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><a href="/tags/att_form_accept_charset.asp">accept-charset</a></td>
+        <td>Specifies the character encodings used for form submission</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/att_form_action.asp">action</a></td>
+        <td>Specifies where to send the form-data when a form is submitted</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/att_form_autocomplete.asp">autocomplete</a></td>
+        <td>Specifies whether a form should have autocomplete on or off</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/att_form_enctype.asp">enctype</a></td>
+        <td>Specifies how the form-data should be encoded when submitting it to the
+          server (only for method="post")</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/att_form_method.asp">method</a></td>
+        <td>Specifies the HTTP method to use when sending form-data</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/att_form_name.asp">name</a></td>
+        <td>Specifies the name of the form</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/att_form_novalidate.asp">novalidate</a></td>
+        <td>Specifies that the form should not be validated when submitted</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/att_form_rel.asp">rel</a></td>
+        <td>Specifies the relationship between a linked resource and the current
+          document</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/att_form_target.asp">target</a></td>
+        <td>Specifies where to display the response that is received after submitting
+          the form</td>
+      </tr>
+      </tbody></table>
+  </div>
+</body>
+</html>

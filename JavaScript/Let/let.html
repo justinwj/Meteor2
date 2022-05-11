@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Redeclaring a Variable Using var</h2>
+
+<p id="demo"></p>
+
+<script>
+  var  x = 10;
+  // Here x is 10
+
+  {
+    var x = 2;
+// Here x is 2
+  }
+  // x CAN be used here
+  // Here x is 2
+  {
+    let x = 2;
+  }
+  // x can NOT be used here
+
+  document.getElementById("demo").innerHTML = x;
+</script>
+</body>
+</html>

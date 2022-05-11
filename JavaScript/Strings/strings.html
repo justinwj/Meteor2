@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript Strings</h2>
+
+<p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p>The escape sequence \" inserts a double quote in a string.</p>
+<p>The escape sequence \\ inserts a backslash in a string.</p>
+<p id="demo3"></p>
+<p>
+  You can break a code line within a text string with a backslash.
+</p>
+
+<p id="demo4"></p>
+<script>
+  let answer1 = 'Its alright';
+  let answer2 = "He is called 'Johnny'";
+  let answer3 = 'He is called "Johnny"';
+
+  document.getElementById("demo").innerHTML =
+          answer1 + "<br>" + answer2 + "<br>" + answer3;
+
+
+
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    document.getElementById("demo2").innerHTML = text.length;
+
+    let text2 = "We are the so-called \"Vikings\" from the north.";
+    document.getElementById("demo3").innerHTML = text2;
+
+
+    let text3 = "The character \\ is called backslash.";
+    document.getElementById("demo3").innerHTML = text3;
+
+  document.getElementById("demo4").innerHTML = "Hello \
+Dolly!";//single backslash breaks line or use an '+' symbol
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>The toFixed() method rounds a number to a given number of digits.</p>
+<p>For working with money, toFixed(2) is perfect.</p>
+
+<p id="demo3"></p>
+
+<script>
+  let z = 9.656;
+  document.getElementById("demo3").innerHTML =
+          z.toFixed(0) + "<br>" +
+          z.toFixed(2) + "<br>" +
+          z.toFixed(4) + "<br>" +
+          z.toFixed(6);
+</script>
+</body>
+</html>

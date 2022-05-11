@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript Objects</h2>
+<p>JavaScript objects are written with curly braces <code class="w3-codespan">{}</code>.</p>
+<p>Object properties are written as name:value pairs, separated by commas.</p>
+<p id="demo"></p>
+
+<script>
+  const person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age     : 50,
+    eyeColor  : "blue"
+  };//this is an 'object'
+
+  document.getElementById("demo").innerHTML =
+          person.firstName + " is " + person.age + " years old.";
+</script>
+</body>
+</html>
