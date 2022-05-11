@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>The <code class="w3-codespan">slice()</code> method slices out a piece of an array into a new
+  array.</p>
+<p>This example slices out a part of an array starting from array element 1
+  ("Orange"):</p>
+<div class="w3-panel w3-note">
+  <h2>Note</h2>
+  <p>The <code class="w3-codespan">slice()</code> method creates a new array.</p>
+  <p>The <code class="w3-codespan">slice()</code> method does not remove any elements from the source array.</p>
+</div>
+<h2>JavaScript Array Methods</h2>
+<h2>slice()</h2>
+<p>This example slices out a part of an array starting from array element 1 ("Orange"):</p>
+
+<p id="demo"></p>
+
+<script>
+  const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+  const citrus = fruits.slice(1);
+  document.getElementById("demo").innerHTML = fruits + "<br><br>" + citrus;
+</script>
+<hr>
+<h2>JavaScript Array Methods</h2>
+<h2>slice()</h2>
+<p>This  example slices out a part of an array starting from array element 3 ("Apple")</p>
+
+<p id="demo2"></p>
+
+<script>
+  const fruits2 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+  const citrus2 = fruits2.slice(3);
+  document.getElementById("demo2").innerHTML = fruits2 + "<br><br>" + citrus2;
+</script>
+<hr>
+<h2>JavaScript Array Methods</h2>
+<h2>slice()</h2>
+<p>When the slice() method is given two arguments, it selects array elements from the start argument, and up to (but not included) the end argument:</p>
+
+<p id="demo3"></p>
+
+<script>
+  const fruits3 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+  const citrus3 = fruits3.slice(1,3);
+  document.getElementById("demo3").innerHTML = fruits3 + "<br><br>" + citrus3;
+</script>
+</body>
+</html>

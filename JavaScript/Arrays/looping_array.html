@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>y</title>
+</head>
+<body>
+<h2>JavaScript Arrays</h2>
+
+<p>The best way to loop through an array is using a standard for loop:</p>
+
+<p id="demo"></p>
+
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let fLen = fruits.length;
+
+    let text = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+    }
+    text += "</ul>";
+
+    document.getElementById("demo").innerHTML = text;
+</script>
+<hr>
+<h2>JavaScript Arrays</h2>
+
+<p>Array.forEach() calls a function for each array element.</p>
+
+<p id="demo2"></p>
+
+<script>
+    const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+
+    let text2 = "<ul>";
+    fruits2.forEach(myFunction);
+    text2 += "</ul>";
+    document.getElementById("demo2").innerHTML = text2;
+
+    function myFunction(value) {
+        text2 += "<li>" + value + "</li>";
+    }
+</script>
+</body>
+</html>

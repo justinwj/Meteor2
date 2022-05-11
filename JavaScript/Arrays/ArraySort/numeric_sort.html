@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript Array Sort, Numeric Sort:</h2>
+
+<p>By default, the <code class="w3-codespan">sort()</code> function sorts values as <strong>strings</strong>.</p>
+<p>This works well for strings ("Apple" comes before "Banana").</p>
+<p>However, if numbers are sorted as strings, "25" is bigger than "100",
+  because "2" is bigger than "1".</p>
+<p>Because of this, the <code class="w3-codespan">sort()</code> method will produce incorrect result when sorting
+  numbers.</p>
+<p>You can fix this by providing a <strong>compare function</strong>:</p>
+------------
+<p id="demo1"></p>
+<p id="demo2"></p>
+------------
+<script>
+  const points = [40, 100, 1, 5, 25, 10];
+  document.getElementById("demo1").innerHTML = points;
+
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo2").innerHTML = points;
+</script>
+<hr>
+
+<h2>JavaScript Array Sort, Numeric Sort:</h2>
+<h2>The Compare Function</h2>
+<p>The purpose of the compare function is to define an alternative sort
+  order.</p>
+<p>The compare function should return a negative, zero, or positive value, depending on
+  the arguments:</p>
+<div class="w3-example">
+  <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+<span class="jskeywordcolor" style="color:mediumblue">function</span>(a, b){
+    <span class="jskeywordcolor" style="color:mediumblue">return</span> a - b}
+    <span class="jsnumbercolor" style="color:red">
+</span> </span></div>
+</div>
+<p>When the <code class="w3-codespan">sort()</code> function compares two values, it sends the values to the
+  compare function, and sorts the values according to the returned (negative,
+  zero, positive) value.</p>
+<p>If the result is negative <code class="w3-codespan">a</code> is sorted before
+  <code class="w3-codespan">b</code>.</p>
+<p>If the result is positive <code class="w3-codespan">b</code> is sorted
+  before <code class="w3-codespan">a</code>.</p>
+<p>If the result is 0 no changes are done with the sort order of the two
+  values.</p>
+<p><strong>Example:</strong></p>
+<p>The compare function compares all the values in the array, two values at a
+  time <code class="w3-codespan">(a, b)</code>.</p>
+<p>When comparing 40 and 100, the <code class="w3-codespan">sort()</code>
+  method calls the compare function(40, 100).</p>
+<p>The function calculates 40 - 100 <code class="w3-codespan">(a - b)</code>, and
+  since the result is negative (-60),&nbsp; the sort function will sort 40 as a value lower than 100.</p>
+<p>You can use this code snippet to experiment with numerically and
+  alphabetically sorting:</p>
+
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button><br>
+-------------
+<p id="demo3"></p>
+-------------
+<script>
+  const points2 = [40, 100, 1, 5, 25, 10];
+  document.getElementById("demo3").innerHTML = points2;
+
+  function myFunction1() {
+    points2.sort();
+    document.getElementById("demo3").innerHTML = points2;
+  }
+  function myFunction2() {
+    points2.sort(function(a, b){return a - b});
+    document.getElementById("demo3").innerHTML = points2;
+  }
+</script>
+<hr>
+<h2>Sorting an Array in Random Order</h2>
+<p>Click the button (again and again) to sort the array in random order.</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo4"></p>
+
+<script>
+  const points3 = [40, 100, 1, 5, 25, 10];
+  document.getElementById("demo4").innerHTML = points3;
+
+  function myFunction() {
+    points3.sort(function(a, b){return 0.5 - Math.random()});
+    document.getElementById("demo4").innerHTML = points3;
+  }
+</script>
+<hr>
+<h3>The Fisher Yates Method</h3>
+<p>Click the button (again and again) to sort the array in random order.</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo5"></p>
+
+<script>
+    const points4 = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo5").innerHTML = points4;
+
+    function myFunction() {
+        for (let i = points4.length -1; i > 0; i--) {
+            let j = Math.floor(Math.random() * i)
+            let k = points4[i]
+            points4[i] = points4[j]
+            points4[j] = k
+        }
+        document.getElementById("demo5").innerHTML = points4;
+    }
+</script>
+</body>
+</html>

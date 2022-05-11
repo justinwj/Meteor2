@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript Arrays</h2>
+<p>A common question is: How do I know if a variable is an array?</p>
+<p>The problem is that the JavaScript operator <code class="w3-codespan">typeof</code> returns
+  "<code class="w3-codespan">object</code>":</p>
+
+<p id="demo"></p>
+
+<script>
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  document.getElementById("demo").innerHTML = typeof fruits;
+</script>
+<hr>
+<p>To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method
+  <code class="w3-codespan">Array.isArray()</code>:</p>
+<p id="demo2"></p>
+
+<script>
+  const fruits2 = ["Banana", "Orange", "Apple"];
+  document.getElementById("demo2").innerHTML = Array.isArray(fruits2);
+</script>
+<hr>
+<p>The <code class="w3-codespan">instanceof</code> operator returns true if an object is created
+  by a given constructor:</p>
+
+<p id="demo3"></p>
+
+<script>
+  var fruits3 = ["Banana", "Orange", "Apple"];
+  document.getElementById("demo3").innerHTML = fruits3 instanceof Array;
+</script>
+</body>
+</html>
