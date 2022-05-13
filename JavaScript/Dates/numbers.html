@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript new Date()</h2>
+<p>6 numbers specify year, month, day, hour, minute and second:</p>
+
+<p id="demo"></p>
+
+<script>
+  const d = new Date(2018, 11, 24, 10, 33, 30);
+  document.getElementById("demo").innerHTML = d;
+</script>
+<p>5 numbers specify year, month, day, hour, and minute:</p>
+
+<p id="demo2"></p>
+
+<script>
+  const e = new Date(2018, 11, 24, 10, 33);
+  document.getElementById("demo2").innerHTML = e;
+</script>
+<p>4 numbers specify year, month, day, and hour:</p>
+
+<p id="demo3"></p>
+
+<script>
+  const f = new Date(2018, 11, 24, 10);
+  document.getElementById("demo3").innerHTML = f;
+</script>
+</body>
+</html>

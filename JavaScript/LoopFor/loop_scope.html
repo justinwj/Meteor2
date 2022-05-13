@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript var</h2>
+
+<div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+<span class="jskeywordcolor" style="color:mediumblue">var</span>
+    i = <span class="jsnumbercolor" style="color:red">5</span>;
+    <br>
+    <span class="jsnumbercolor" style="color:red"></span>
+    <br>
+<span class="jskeywordcolor" style="color:mediumblue">for</span>
+    (<span class="jskeywordcolor" style="color:mediumblue">var</span>
+    i = <span class="jsnumbercolor" style="color:red">0</span>;
+    i &lt; <span class="jsnumbercolor" style="color:red">10</span>;
+    i++) {<br><span class="jsnumbercolor" style="color:red"></span>
+    &nbsp;&nbsp;
+    <span class="commentcolor" style="color:green">// some code<br></span>}
+    <br><span class="jsnumbercolor" style="color:red"></span>
+    <br>
+    <span class="jsnumbercolor" style="color:red"></span>
+    <span class="commentcolor" style="color:green">// Here i is 10</span>
+</span>
+</div>
+
+--------------------------
+<p id="demo"></p>
+--------------------------
+<script>
+    var i = 5;
+    for (var i = 0; i < 10; i++) {
+        // some statements
+    }
+    document.getElementById("demo").innerHTML = i;
+</script>
+<h2>JavaScript let</h2>
+
+<div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+<span class="jskeywordcolor" style="color:mediumblue">let</span>
+    i = <span class="jsnumbercolor" style="color:red">5</span>;
+    <br><span class="jsnumbercolor" style="color:red"></span>
+    <br>
+<span class="jskeywordcolor" style="color:mediumblue">for</span>
+    (<span class="jskeywordcolor" style="color:mediumblue">let</span>
+    i = <span class="jsnumbercolor" style="color:red">0</span>;
+    i &lt; <span class="jsnumbercolor" style="color:red">10</span>;
+    i++) {
+    <br><span class="jsnumbercolor" style="color:red"></span>
+    &nbsp; <span class="commentcolor" style="color:green">// some code<br></span>
+    }<br>
+    <span class="jsnumbercolor" style="color:red"></span>
+    <br>
+    <span class="jsnumbercolor" style="color:red"></span>
+    <span class="commentcolor" style="color:green">// Here i is 5</span>
+</span>
+</div>
+--------------------------
+<p id="demo2"></p>
+--------------------------
+<script>
+    {
+        let i = 5;
+        for (let i = 0; i < 10; i++) {
+            // some statements
+        }
+        document.getElementById("demo2").innerHTML = i;
+    }
+</script>
+<p>In the first example, using <code class="w3-codespan">var</code>, the variable declared in
+    the loop redeclares the variable outside the loop. </p>
+<p>In the second example, using <code class="w3-codespan">let</code>, the variable declared in
+    the loop does not redeclare the variable outside the loop. </p>
+<p>When <code class="w3-codespan">let</code> is used to declare the i variable in a loop, the i
+    variable will only be visible within the loop. </p>
+</body>
+</html>

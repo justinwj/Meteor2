@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+    const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+    let i = 0;
+    let len = cars.length;
+    let text = "";
+
+    for (; i < len;) {
+        text += cars[i] + "<br>";
+        i++;
+    }
+    document.getElementById("demo").innerHTML = text;
+</script>
+<h2>Statement 3</h2>
+<p>Often statement 3 increments the value of the initial variable.</p>
+<p>This is not always the case, JavaScript doesn't care, and statement 3 is
+    optional.</p>
+<p>Statement 3 can do anything like negative increment (i--), positive
+    increment (i = i + 15), or anything else.</p>
+<p>Statement 3 can also be omitted (like when you increment your values inside the loop): </p>
+
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+<span class="jskeywordcolor" style="color:mediumblue">let</span>
+    i = <span class="jsnumbercolor" style="color:red">0</span>;
+    <br>
+<span class="jskeywordcolor" style="color:mediumblue">let</span>
+    len = cars.<span class="jspropertycolor" style="color:black">length</span>;
+    <br>
+<span class="jskeywordcolor" style="color:mediumblue">let</span>
+    text = <span class="jsstringcolor" style="color:brown">""</span>;
+    <br>
+<span class="jskeywordcolor" style="color:mediumblue">for</span>
+    (; i &lt; len; )
+    { <br>&nbsp; text += cars[i] + <span class="jsstringcolor" style="color:brown">"&lt;br&gt;"</span>;
+    <br>
+    <span class="jsnumbercolor" style="color:red"></span>
+    &nbsp;<span class="jsnumbercolor" style="color:red"></span>
+    i++;
+    <br>} </span></div>
+<a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_loop_for_om3" target="_blank">Try it Yourself »</a>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript Math.sin()</h2>
+
+<p><code class="w3-codespan">Math.sin(x)</code> returns the sine (a value between -1 and 1)
+  of the angle x (given in radians).</p>
+<p>If you want to use degrees instead of radians, you have to convert degrees to radians:</p>
+<p>Angle in radians = Angle in degrees x PI / 180.</p>
+<p>Angle in radians = (angle in degrees) * PI / 180.</p>
+-------------------------------------------------------------
+<p id="demo"></p>
+
+<script>
+  document.getElementById("demo").innerHTML =
+          "The sine value of 90 degrees is " + Math.sin(90 * Math.PI / 180);
+</script>
+</body>
+</html>

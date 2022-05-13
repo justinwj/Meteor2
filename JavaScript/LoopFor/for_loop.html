@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+  let text = "";
+
+  for (let i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+  }
+
+  document.getElementById("demo").innerHTML = text;
+</script>
+<h2>The For Loop</h2>
+<p>The <code class="w3-codespan">for</code> loop has the following syntax:</p>
+<span class="jscolor" style="color:black"><div>
+
+<span class="jskeywordcolor" style="color:mediumblue">for</span> (<i>statement 1</i>;<i> statement 2</i>;
+  <i> statement 3</i>) {<br><span class="jsnumbercolor" style="color:red">
+</span>    &nbsp; <span class="commentcolor" style="color:green">// <i>code block to be executed</i>
+  <br></span><span class="jsnumbercolor" style="color:red">
+</span> }<br>
+</div> </span>
+<p><strong>Statement 1</strong> is executed (one time) before the execution of the code block.</p>
+<p><strong>Statement 2</strong> defines the condition for executing the code block.</p>
+<p><strong>Statement 3</strong> is executed (every time) after the code block has been executed.</p>
+
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+<span class="jskeywordcolor" style="color:mediumblue">for
+</span> (<span class="jskeywordcolor" style="color:mediumblue">let</span>
+  i = <span class="jsnumbercolor" style="color:red">0</span>; i &lt;
+  <span class="jsnumbercolor" style="color:red">5</span>; i++) {<br><span class="jsnumbercolor" style="color:red">
+</span> &nbsp; text += <span class="jsstringcolor" style="color:brown">"The number is "</span> + i +
+  <span class="jsstringcolor" style="color:brown">"&lt;br&gt;"</span>;<br><span class="jsnumbercolor" style="color:red">
+</span>}<br><span class="jsnumbercolor" style="color:red">
+</span>  </span></div>
+<a target="_blank" href="tryit.asp?filename=tryjs_loop_for_ex" class="w3-btn w3-margin-bottom">Try it Yourself »</a>
+<p>From the example above, you can read:</p>
+<p><strong>Statement 1</strong> sets a variable before the loop starts (let i = 0).</p>
+<p><strong>Statement 2</strong> defines the condition for the loop to run (i must be less than
+  5).</p>
+<p><strong>Statement 3</strong> increases a value (i++) each time the code block in the loop has
+  been executed.</p>
+</body>
+</html>

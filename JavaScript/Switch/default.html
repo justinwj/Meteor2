@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript switch, 'default' on bottom</h2>
+
+<p id="demo"></p>
+
+<script>
+  let text;
+  switch (new Date().getDay()) {
+    case 6:
+      text = "Today is Saturday";
+      break;
+    case 0:
+      text = "Today is Sunday";
+      break;
+    default:
+      text = "Looking forward to the Weekend";
+  }
+  document.getElementById("demo").innerHTML = text;
+</script>
+<h2>JavaScript switch, 'default' on top</h2>
+
+<p id="demo2"></p>
+
+<script>
+  let text2;
+  switch (new Date().getDay()) {
+    default:
+      text2 = "Looking forward to the Weekend";
+      break;
+    case 6:
+      text2 = "Today is Saturday";
+      break;
+    case 0:
+      text2 = "Today is Sunday";
+  }
+  document.getElementById("demo2").innerHTML = text;
+</script>
+<div class="w3-panel w3-note">
+  <p>If <code class="w3-codespan">default</code> is not the last case in the switch block, remember to end the default case with a break.</p>
+</div>
+</body>
+</html>
