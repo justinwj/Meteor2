@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+    let i = 0;
+    let text = "";
+    for (;cars[i];) {
+        text += cars[i] + "<br>";
+        i++;
+    }
+
+    document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+<p id="demo2"></p>
+
+<script>
+    {
+        const cars = ["BMW", "Volvo", "Saab", "Ford","Mazda"];
+
+        let i = 0;
+        let text = "";
+        while (cars[i]) {
+            text += cars[i] + "<br>";
+            i++;
+        }
+
+        document.getElementById("demo2").innerHTML = text;
+    }
+</script>
+</html>

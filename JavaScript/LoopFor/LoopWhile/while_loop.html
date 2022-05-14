@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript While Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+  let text = "";
+  let i = 0;
+  while (i < 10) {
+    text += "<br>The number is " + i;
+    i++;
+  }
+  document.getElementById("demo").innerHTML = text;
+</script>
+<div class="w3-panel w3-note">
+    <p>If you forget to increase the variable used in the condition, the loop will never end.
+        This will crash your browser.</p>
+</div>
+</body>
+</html>

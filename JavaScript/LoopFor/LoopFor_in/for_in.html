@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>For in Loop</title>
 </head>
 <body>
 <h2>JavaScript For In Loop</h2>
@@ -20,5 +20,21 @@
 
   document.getElementById("demo").innerHTML = txt;
 </script>
+
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+<span class="jskeywordcolor" style="color:mediumblue">const</span> person = {fname:<span class="jsstringcolor" style="color:brown">"John"</span>, lname:<span class="jsstringcolor" style="color:brown">"Doe"</span>, age:<span class="jsnumbercolor" style="color:red">25</span>};<br><br>
+<span class="jskeywordcolor" style="color:mediumblue">let</span> text = <span class="jsstringcolor" style="color:brown">""</span>;<br><span class="jskeywordcolor" style="color:mediumblue">for</span> (<span class="jskeywordcolor" style="color:mediumblue">let</span> x <span class="jskeywordcolor" style="color:mediumblue">in</span> person) {<br><span class="jsnumbercolor" style="color:red">
+</span>&nbsp; text += person[x];<br><span class="jsnumbercolor" style="color:red">
+</span>} </span></div>
+
+
+<h2>Example Explained</h2>
+<ul>
+    <li>The <b>for in</b> loop iterates over a <b>person</b> object</li>
+    <li>Each iteration returns a <b>key</b> (x)</li>
+    <li>The key is used to access the <b>value</b> of the key</li>
+    <li>The value of the key is <b>person[x]</b></li>
+</ul>
 </body>
 </html>

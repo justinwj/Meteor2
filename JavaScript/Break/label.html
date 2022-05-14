@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript break</h2>
+
+<p id="demo"></p>
+
+<script>
+  const cars = ["BMW", "Volvo", "Saab", "Ford"];
+  let text = "";
+
+  list: {
+    text += cars[0] + "<br>";
+    text += cars[1] + "<br>";
+    break list;//list is the 'label' name
+    text += cars[2] + "<br>";
+    text += cars[3] + "<br>";
+  }
+
+  document.getElementById("demo").innerHTML = text;
+</script>
+<p>
+  The <code class="w3-codespan">continue</code>
+  statement (with or without a label reference) can only be used to <strong>skip one
+  loop iteration</strong>.</p>
+<p>The <code class="w3-codespan">break</code> statement, without a label reference, can only be used to <strong>
+  jump out of a loop
+  or a switch</strong>.</p>
+<p>With a label reference, the break statement can be used to <strong>jump out
+    of any code block</strong>: </p>
+<div class="w3-panel w3-note">
+    <p>A code block is a block of code between '{' and '}'.</p>
+</div>
+</body>
+</html>
