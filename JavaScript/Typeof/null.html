@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Null</h2>
+<p>In JavaScript <code class="w3-codespan">null</code> is "nothing". It is supposed to be something that doesn't exist.</p>
+<p>Unfortunately, in JavaScript, the data type of <code class="w3-codespan">null</code> is an object.</p>
+<div class="w3-panel w3-note">
+  <p>You can consider it a bug in JavaScript that <code class="w3-codespan">typeof null</code> is an object. It should be <code class="w3-codespan">null</code>.</p>
+</div>
+<p>You can empty an object by setting it to <code class="w3-codespan">null</code>:</p>
+<h2>JavaScript</h2>
+
+<p>Objects can be emptied by setting the value to <b>null</b>.</p>
+
+<p id="demo"></p>
+
+<script>
+  let person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+  person = //null;
+  document.getElementById("demo").innerHTML = /*typeof*/ person;
+</script>
+
+<h2>JavaScript</h2>
+
+<p>Objects can be emptied by setting the value to <b>undefined</b>.</p>
+
+<p id="demo2"></p>
+
+<script>
+    {
+        let person = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue"};
+        person = undefined;
+        document.getElementById("demo2").innerHTML = person;
+    }
+</script>
+<h2>Difference Between Undefined and Null</h2>
+<p><code class="w3-codespan">undefined</code> and <code class="w3-codespan">null</code> are equal in value but different in type:</p>
+<h2>JavaScript</h2>
+
+<p>Undefined and null are equal in value but different in type:</p>
+
+<p id="demo3"></p>
+
+<script>
+    {
+        document.getElementById("demo3").innerHTML =
+            typeof undefined + "<br>" +
+            typeof null + "<br><br>" +
+            (null === undefined) + "<br>" +
+            (null == undefined);
+    }
+</script>
+</body>
+</html>

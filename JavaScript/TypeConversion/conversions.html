@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>JavaScript <span class="color_h1">Type Conversion</span></h1>
+<ul>
+  <li>Converting Strings to Numbers</li>
+  <li>Converting Numbers to Strings</li>
+  <li>Converting Dates to Numbers</li>
+  <li>Converting Numbers to Dates</li>
+  <li>Converting Booleans to Numbers</li>
+  <li>Converting Numbers to Booleans</li>
+</ul>
+<h2>JavaScript Type Conversion</h2>
+<p>JavaScript variables can be converted to a new variable and another data type:</p>
+<ul>
+    <li>By the use of a JavaScript function</li>
+    <li><strong>Automatically</strong> by JavaScript itself</li>
+</ul>
+<h2>Converting Strings to Numbers</h2>
+<p>The global method <code class="w3-codespan">Number()</code> can convert strings to numbers.</p>
+<p>Strings containing numbers (like "3.14") convert to numbers (like 3.14).</p>
+<p>Empty strings convert to 0.</p>
+<p>Anything else converts to <code class="w3-codespan">NaN</code> (Not a Number).</p>
+
+<div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+Number(<span class="jsstringcolor" style="color:brown">"3.14"</span>)
+    &nbsp;&nbsp;&nbsp; <span class="commentcolor" style="color:green">// returns 3.14<br></span>
+Number(<span class="jsstringcolor" style="color:brown">" "</span>)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="commentcolor" style="color:green">// returns 0 <br></span>
+Number(<span class="jsstringcolor" style="color:brown">""</span>)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span class="commentcolor" style="color:green">// returns 0<br></span>
+Number(<span class="jsstringcolor" style="color:brown">"99 88"</span>)
+    &nbsp;&nbsp; <span class="commentcolor" style="color:green">// returns NaN
+ </span></span></div>
+
+<h2>Number Methods</h2>
+<p>In the chapter <a href="https://www.w3schools.com/js/js_number_methods.asp">Number Methods</a>, you
+    will find more methods that can be used to convert strings to
+    numbers:</p>
+<table class="ws-table-all notranslate">
+    <tbody><tr>
+        <th style="width:25%">Method</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Number()</td>
+        <td>Returns a number, converted from its argument</td>
+    </tr>
+    <tr>
+    </tr><tr>
+        <td>parseFloat()</td>
+        <td>Parses a string and returns a floating point number</td>
+    </tr>
+    <tr>
+        <td>parseInt()</td>
+        <td>Parses a string and returns an integer</td>
+    </tr>
+    </tbody></table>
+#####################################################
+<h2>The Unary + Operator</h2>
+<h3>The <strong>unary + operator</strong> can be used to
+    convert a variable to a number:</h3>
+######################################################
+<p>The typeof operator returns the type of a variable or expression:</p>
+
+<p id="demo"></p>
+________________________________
+<script>
+    let y = "5";//y is a string
+    let x = + y;//x is a number
+    document.getElementById("demo").innerHTML = typeof y + "<br>" + typeof x;
+</script>
+
+
+
+<p>The typeof operator returns the type of a variable or expression:</p>
+<p>
+    If the
+    variable cannot be converted, it will still become a number, but with the value <code class="w3-codespan">NaN</code>
+    (Not a Number):</p>
+<p id="demo2"></p>
+________________________________
+<script>
+    {
+        let y = "John";
+        let x = +y;
+        document.getElementById("demo2").innerHTML = typeof y + "<br>" + typeof x;
+    }
+</script>
+
+<h2>JavaScript Type Conversions</h2>
+
+<p id="demo3"></p>
+
+<script>
+    {
+        document.getElementById("demo3").innerHTML =
+            (5 + null) + "<br>" +
+            ("5" + null) + "<br>" +
+            ("5" + 2) + "<br>" +
+            ("5" - 2) + "<br>" +
+            ("5" * "2") + "<br>" +
+            ("5" / "2") + "<br>"
+    }
+</script>
+<h2>JavaScript Type Conversion Table</h2>
+<p>This table shows the result of converting different JavaScript values to Number, String, and Boolean:</p>
+
+<table class="ws-table-all notranslate">
+    <tbody><tr>
+        <th>Original<br>Value</th>
+        <th>Converted<br>to Number</th>
+        <th>Converted<br>to String</th>
+        <th>Converted<br>to Boolean</th>
+        <th style="width:10%">Try it</th>
+    </tr>
+    <tr>
+        <td>false</td>
+        <td>0</td>
+        <td>"false"</td>
+        <td>false</td>
+        <td><a class="w3-btn btnsmall" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_false" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>true</td>
+        <td>1</td>
+        <td>"true"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_true" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>"0"</td>
+        <td>false</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_number_0" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>"1"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_number_1" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>"0"</td>
+        <td>0</td>
+        <td>"0"</td>
+        <td class="important">true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_string_0" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>"000"</td>
+        <td>0</td>
+        <td>"000"</td>
+        <td class="important">true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_string_000" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>"1"</td>
+        <td>1</td>
+        <td>"1"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_string_1" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>NaN</td>
+        <td>NaN</td>
+        <td>"NaN"</td>
+        <td>false</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_nan" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>Infinity</td>
+        <td>Infinity</td>
+        <td>"Infinity"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_infinity" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>-Infinity</td>
+        <td>-Infinity</td>
+        <td>"-Infinity"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_infinity_minus" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>""</td>
+        <td class="important">0</td>
+        <td>""</td>
+        <td class="important">false</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_string_empty" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>"20"</td>
+        <td>20</td>
+        <td>"20"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_string_number" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>"twenty"</td>
+        <td>NaN</td>
+        <td>"twenty"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_string_text" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>[ ]</td>
+        <td class="important">0</td>
+        <td>""</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_array_empty" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>[20]</td>
+        <td class="important">20</td>
+        <td>"20"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_array_one_number" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>[10,20]</td>
+        <td>NaN</td>
+        <td>"10,20"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_array_two_numbers" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>["twenty"]</td>
+        <td>NaN</td>
+        <td>"twenty"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_array_one_string" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>["ten","twenty"]</td>
+        <td>NaN</td>
+        <td>"ten,twenty"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_array_two_strings" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>function(){}</td>
+        <td>NaN</td>
+        <td>"function(){}"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_function" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>{ }</td>
+        <td>NaN</td>
+        <td>"[object Object]"</td>
+        <td>true</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_object" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>null</td>
+        <td class="important">0</td>
+        <td>"null"</td>
+        <td>false</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_null" target="_blank">Try it »</a></td>
+    </tr>
+    <tr>
+        <td>undefined</td>
+        <td>NaN</td>
+        <td>"undefined"</td>
+        <td>false</td>
+        <td><a class="w3-btn btnsmall" href="tryit.asp?filename=tryjs_type_convert_undefined" target="_blank">Try it »</a></td>
+    </tr>
+    </tbody></table>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>In JavaScript, a variable without a value, has the value <code class="w3-codespan">undefined</code>.
+    The type is also <code class="w3-codespan">undefined</code>.</p>
+<h2>JavaScript</h2>
+
+<p>The value (and the data type) of a variable with no value is <b>undefined</b>.</p>
+
+<p id="demo"></p>
+
+<script>
+    let car;
+    document.getElementById("demo").innerHTML =
+        car + "<br>" + typeof car;
+</script>
+
+<p>Variables can be emptied if you set the value to <b>undefined</b>.</p>
+<p>Any variable can be emptied, by setting the value to <code class="w3-codespan">undefined</code>.
+    The type will also be <code class="w3-codespan">undefined</code>.</p>
+<p id="demo2"></p>
+
+<script>
+    {
+        let car = "Volvo";
+        car = undefined;
+
+        document.getElementById("demo2").innerHTML = car + "<br>" + typeof car;
+    }
+</script>
+</body>
+</html>

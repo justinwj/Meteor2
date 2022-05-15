@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>The constructor Property</h2>
+<h2>The JavaScript constructor Property</h2>
+
+<p>The constructor property returns the constructor function for a variable or an
+    object.</p>
+<p>The <code class="w3-codespan">constructor</code> property returns the constructor
+    function for all JavaScript variables.</p>
+
+<p id="demo"></p>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<script>
+    document.getElementById("demo").innerHTML =
+        "john".constructor + "<br>" +
+        (3.14).constructor + "<br>" +
+        false.constructor + "<br>" +
+        [1,2,3,4].constructor + "<br>" +
+        {name:'john', age:34}.constructor + "<br>" +
+        new Date().constructor + "<br>" +
+        function () {}.constructor;
+</script>
+<p>
+    You can check the constructor property to find out if an object is an <code class="w3-codespan">Array</code>
+    (contains the word "Array"):</p>
+<h2>JavaScript Arrays</h2>
+
+<p>This "home made" isArray() function returns true when used on an array:</p>
+
+<p id="demo2"></p>
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+<script>
+    {
+        const fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo2").innerHTML = isArray(fruits);
+
+        function isArray(myArray) {
+            return myArray.constructor.toString().indexOf("Array") > 8;//what is this little piece of math here?
+        }
+    }
+</script>
+
+<h2>JavaScript Array Object</h2>
+
+<p>Or even simpler, you can check if the object is an <strong>Array function</strong>:</p>
+<p id="demo3"></p>
+---------------------------------
+<script>
+    {
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo3").innerHTML = isArray(fruits);
+
+        function isArray(myArray) {
+            return myArray.constructor === Array;//this makes sense
+        }
+    }
+</script>
+
+<p>This "home made" isDate() function returns true when used on an date:</p>
+
+<p id="demo4"></p>
+--------------------------------
+<script>
+    {
+        const myDate = new Date();
+        document.getElementById("demo4").innerHTML = isDate(myDate);
+
+        function isDate(myDate) {
+            return myDate.constructor.toString().indexOf("Date") > -1;//more of this weird little bit of math
+        }
+    }
+</script>
+<p>Or even simpler, you can check if the object is a <strong>Date function</strong>:</p>
+<h2>JavaScript Date Object</h2>
+<p>This "home made" isDate() function returns true when used on an date:</p>
+
+<p id="demo5"></p>
+-----------------------------------
+<script>
+    {
+        const myDate = new Date();
+        document.getElementById("demo5").innerHTML = isDate(myDate);
+
+        function isDate(myDate) {
+            return myDate.constructor === Date;
+        }
+    }
+</script>
+</body>
+</html>

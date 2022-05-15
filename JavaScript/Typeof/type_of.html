@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>In JavaScript there are 5 different data types that can contain values:</p>
+<ul>
+    <li><code class="w3-codespan">string</code></li>
+    <li><code class="w3-codespan">number</code></li>
+    <li><code class="w3-codespan">boolean</code></li>
+    <li><code class="w3-codespan">object</code></li>
+    <li><code class="w3-codespan">function</code></li>
+</ul>
+<p>There are 6 types of objects:</p>
+<ul>
+    <li><code class="w3-codespan">Object</code></li>
+    <li><code class="w3-codespan">Date</code></li>
+    <li><code class="w3-codespan">Array</code></li>
+    <li><code class="w3-codespan">String</code></li>
+    <li><code class="w3-codespan">Number</code></li>
+    <li><code class="w3-codespan">Boolean</code></li>
+</ul>
+<p>And 2 data types that cannot contain values:</p>
+<ul>
+    <li><code class="w3-codespan">null</code></li>
+    <li><code class="w3-codespan">undefined</code></li>
+</ul>
+<h2>The JavaScript typeof Operator</h2>
+
+<p>The typeof operator returns the type of a variable, object, function or expression.</p>
+--------------------
+<p id="demo"></p>
+--------------------
+<script>
+    document.getElementById("demo").innerHTML =
+        typeof "john" + "<br>" +
+        typeof 3.14 + "<br>" +
+        typeof NaN + "<br>" +
+        typeof false + "<br>" +
+        typeof [1,2,3,4] + "<br>" +
+        typeof {name:'john', age:34} + "<br>" +
+        typeof new Date() + "<br>" +
+        typeof function () {} + "<br>" +
+        typeof myCar + "<br>" +
+        typeof null;
+</script>
+<p>Please observe:</p>
+<ul>
+    <li>The data type of NaN is number</li>
+    <li>The data type of an array is object</li>
+    <li>The data type of a date is object</li>
+    <li>The data type of null is object</li>
+    <li>The data type of an undefined variable is <strong>undefined</strong>
+        *</li>
+    <li>The data type of a variable that has not been assigned a value is
+        also <strong>undefined</strong> *</li>
+</ul>
+<div class="w3-panel w3-note">
+    <p>You cannot use <code class="w3-codespan">typeof</code> to determine if a JavaScript object is an array (or a date).</p>
+</div>
+<h2>Primitive Data</h2>
+<p>A primitive data value is a single simple data value with no additional
+    properties and methods.</p>
+<p>The <code class="w3-codespan">typeof</code> operator can return one of these primitive types:</p>
+<ul>
+    <li><code class="w3-codespan">string</code></li>
+    <li><code class="w3-codespan">number</code></li>
+    <li><code class="w3-codespan">boolean</code></li>
+    <li><code class="w3-codespan">undefined</code></li>
+</ul>
+
+<h2>JavaScript typeof</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+----------------------
+<p id="demo2"></p>
+----------------------
+<script>
+    {
+        document.getElementById("demo2").innerHTML =
+            typeof "john" + "<br>" +
+            typeof 3.14 + "<br>" +
+            typeof true + "<br>" +
+            typeof false + "<br>" +
+            typeof x;
+    }
+</script>
+<h2>Complex Data</h2>
+<p>The <code class="w3-codespan">typeof</code> operator can return one of two complex types:</p>
+<ul>
+    <li><code class="w3-codespan">function</code></li>
+    <li><code class="w3-codespan">object</code></li>
+</ul>
+<p>The <code class="w3-codespan">typeof</code> operator returns "object" for objects, arrays, and null.</p>
+<p>The <code class="w3-codespan">typeof</code> operator does not return "object" for functions.</p>
+<div class="w3-panel w3-note">
+    <h2>JavaScript typeof</h2>
+    <p>The typeof operator returns object for both objects, arrays, and null.</p>
+    <p>The typeof operator does not return object for functions.</p>
+~~~~~~~~~~~~~~~~~~~~~~~~~
+    <p id="demo3"></p>
+~~~~~~~~~~~~~~~~~~~~~~~~~
+    <script>
+        {
+            document.getElementById("demo3").innerHTML =
+                typeof {name: 'john', age: 34} + "<br>" +
+                typeof [1, 2, 3, 4] + "<br>" +
+                typeof null + "<br>" +
+                typeof function myFunc() {
+                };
+        }
+    </script>
+
+    <p>The <code class="w3-codespan">typeof</code> operator returns "<code class="w3-codespan">object</code>"
+        for arrays because in JavaScript arrays are objects.</p>
+    <h2>The Data Type of typeof</h2>
+    <p>The <code class="w3-codespan">typeof</code>operator is not a variable. It is an operator. Operators ( + - * /
+        ) do not have any data type. </p>
+    <p>But, the <code class="w3-codespan">typeof</code> operator always <strong>returns a string</strong> (containing
+        the type of the operand).</p>
+</div>
+</body>
+</html>
