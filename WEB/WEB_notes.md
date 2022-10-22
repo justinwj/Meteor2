@@ -87,3 +87,8 @@ Deuteronomy 25:13
 Deuteronomy 30:6
 World English Bible
 Man cannot 'circumcise' his own heart
+
+Joshua 7:10-12
+World English Bible
+the giving of devoted things, especially to women is
+how the adversary does a large part of his damage(see Adam and Eve)
